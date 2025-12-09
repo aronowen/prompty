@@ -28,6 +28,7 @@ INSTALLED_APPS = [
 # -------------------------------------------------------------
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",   # IMPORTANT for translations
     "django.middleware.common.CommonMiddleware",
@@ -123,6 +124,8 @@ STATICFILES_DIRS = [
 ]
 
 STATIC_ROOT = BASE_DIR / "staticfiles"  # optional, used in deployment
+
+STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 
 # -------------------------------------------------------------
