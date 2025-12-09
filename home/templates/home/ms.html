@@ -1,0 +1,162 @@
+{% extends "home/base.html" %}
+{% block title %}Marketing Strategist · Prompt Scoring Arcade{% endblock %}
+
+{% block content %}
+<head>
+    {% load static i18n %}
+    <meta charset="UTF-8">
+    <title>Marketing Strategist · Prompt Scoring Arcade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+
+    <div class="crt-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo-lockup">
+            <span class="logo-mark">▶</span>
+            <h1 class="site-title">Marketing Strategist Scenario</h1>
+        </div>
+        <p class="site-tagline">
+            Craft a strong prompt as if you were briefing an AI to help plan a launch campaign for a new product feature.
+        </p>
+    </header>
+
+    <main class="main-content">
+        <section class="role-layout">
+
+            <!-- LEFT: Scenario -->
+            <div class="role-panel role-panel-left">
+                <div class="role-panel-inner">
+            
+                    <h2 class="role-panel-title">
+                        {% trans "Your role: Marketing Strategist" %}
+                    </h2>
+            
+                    <p class="role-panel-meta">
+                        {% trans "Scenario · Campaign Planning · Go-To-Market" %}
+                    </p>
+            
+                    <div class="scenario-box">
+            
+                        <h3 class="scenario-heading">{% trans "Scenario" %}</h3>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You are the Marketing Strategist for a B2B SaaS company that helps small and mid-sized businesses manage their projects and clients. The product team has just released a new AI-powered task assistant that can suggest priorities, draft updates, and flag risks directly inside the platform.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        In four weeks, you are running a launch campaign aimed at a mix of audiences. These include existing customers who may upgrade or expand their usage, new prospects who are currently comparing your tool with competing platforms, and partners or resellers who need a clear and compelling story to communicate to their clients.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You want to use an AI assistant to help outline the campaign. You will need ideas for the key value propositions and messaging angles that should resonate with each audience group, recommendations on which channels to use such as email, social posts, in-app messages, webinars, or landing pages, a simple timeline covering the four weeks leading up to the launch, and example content pieces such as subject lines, hooks, social copy, or webinar titles.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Your task is to write a prompt that you would give to an AI assistant to help you generate this campaign plan. Your prompt should provide clear context about the product, outline the goals of the campaign, describe the target audiences, and include any constraints such as tone of voice, budget limitations, or required marketing channels.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-hint">
+                        {% blocktrans trimmed %}
+                        Hint: Imagine you are briefing a freelance strategist who has never seen your brand before. What information would they need to produce a focused, realistic, and on-brand plan?
+                        {% endblocktrans %}
+                        </p>
+            
+                    </div>
+            
+                </div>
+            </div>
+
+            <!-- RIGHT: Prompt form -->
+            <div class="role-panel role-panel-right">
+                <div class="role-panel-inner">
+                    <h2 class="role-panel-title">Submit your prompt</h2>
+                    <p class="role-panel-meta">
+                        {% trans "We’ll score how well your prompt guides the AI to respond with empathy and clarity."%}
+                    </p>
+
+                    <form method="post" class="prompt-form">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="form-errors">
+                                {% for error in form.non_field_errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="field-group">
+                            <label for="{{ form.name.id_for_label }}" class="field-label">
+                                {% trans "Your name"%}
+                            </label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="field-error">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-group field-group-textarea">
+                            <label for="{{ form.prompt.id_for_label }}" class="field-label">
+                                {% trans "Your AI prompt" %}
+                                <span class="field-label-extra">
+                                    ({% trans "describe the support reply you want the AI to draft" %})
+                                </span>
+                            </label>
+                            {{ form.prompt }}
+                            {% if form.prompt.errors %}
+                                <div class="field-error">
+                                    {% for error in form.prompt.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="submit-row">
+                            <button type="submit" class="btn-primary">
+                                {% trans "Submit prompt for scoring ⮕" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-dot"></span>
+    
+        <span class="footer-text">
+            {% trans "Prompt Scoring Arcade · v0.1" %}
+        </span>
+    
+        <div class="footer-logos">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.svg' %}" class="footer-logo">
+            </div>
+            <div class="logo-box">
+                <img src="{% static 'img/logo2.png' %}" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<!-- your page content here -->
+{% endblock %}

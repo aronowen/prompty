@@ -1,0 +1,161 @@
+{% extends "home/base.html" %}
+{% block title %}HR Manager · Prompt Arcade{% endblock %}
+
+{% block content %}
+<head>
+    {% load static i18n %}
+    <meta charset="UTF-8">
+    <title>{% trans "Customer Support Agent · Prompt Scoring Arcade" %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+
+    <div class="crt-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo-lockup">
+            <span class="logo-mark">▶</span>
+            <h1 class="site-title">{% trans "Customer Support Agent Scenario" %}</h1>
+        </div>
+        <p class="site-tagline">
+            {% trans "Craft a strong prompt as if you were briefing an AI to help draft a calm, clear response to a frustrated customer." %}
+        </p>
+    </header>
+
+    <main class="main-content">
+        <section class="role-layout">
+
+            <div class="role-panel role-panel-left">
+                <div class="role-panel-inner">
+            
+                    <h2 class="role-panel-title">
+                        {% trans "Your role: Customer Support Agent" %}
+                    </h2>
+            
+                    <p class="role-panel-meta">
+                        {% trans "Scenario · Email Response · De-escalation" %}
+                    </p>
+            
+                    <div class="scenario-box">
+            
+                        <h3 class="scenario-heading">{% trans "Scenario" %}</h3>
+            
+                        <p class="scenario-text">
+                            {% blocktrans trimmed %}
+                        You are a Customer Support Agent for a subscription-based productivity app used by freelancers and small teams. A long-time customer has sent an angry email after their account was unexpectedly locked due to non-payment caused by an expired card.
+                            {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        In their message, the customer explains that they rely on the app daily to run their business, express frustration that they received no useful warning before being locked out, mention that they have an urgent deadline and are losing money as a result, and threaten to cancel their subscription and leave a negative review.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        After checking the account, you confirm that two payment attempts failed because of an expired card, automated reminder emails were sent but may have landed in spam, and you are authorised to offer a one-time goodwill credit along with temporary reactivation of the account.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Your task is to write a prompt that you would give to an AI assistant to help you draft a reply to this customer. The response should acknowledge their frustration, apologise appropriately, explain what happened in plain non-technical language, offer a concrete resolution such as temporary reactivation and steps to update billing, and reassure them about what will happen next and how they can avoid similar issues in the future.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Your prompt should give the AI clear context about the situation, the tone you want to achieve—calm, empathetic, and professional—and include any constraints such as desired length, structure, phrases to avoid, or internal policy limits that the AI must respect.
+                        {% endblocktrans %}
+                        </p>
+            
+                    </div>
+            
+                </div>
+            </div>
+
+            <!-- RIGHT: Prompt form -->
+            <div class="role-panel role-panel-right">
+                <div class="role-panel-inner">
+                    <h2 class="role-panel-title">Submit your prompt</h2>
+                    <p class="role-panel-meta">
+                        {% trans "We’ll score how well your prompt guides the AI to respond with empathy and clarity."%}
+                    </p>
+
+                    <form method="post" class="prompt-form">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="form-errors">
+                                {% for error in form.non_field_errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="field-group">
+                            <label for="{{ form.name.id_for_label }}" class="field-label">
+                                {% trans "Your name"%}
+                            </label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="field-error">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-group field-group-textarea">
+                            <label for="{{ form.prompt.id_for_label }}" class="field-label">
+                                {% trans "Your AI prompt" %}
+                                <span class="field-label-extra">
+                                    ({% trans "describe the support reply you want the AI to draft" %})
+                                </span>
+                            </label>
+                            {{ form.prompt }}
+                            {% if form.prompt.errors %}
+                                <div class="field-error">
+                                    {% for error in form.prompt.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="submit-row">
+                            <button type="submit" class="btn-primary">
+                                {% trans "Submit prompt for scoring ⮕" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-dot"></span>
+    
+        <span class="footer-text">
+            {% trans "Prompt Scoring Arcade · v0.1" %}
+        </span>
+    
+        <div class="footer-logos">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.svg' %}" class="footer-logo">
+            </div>
+            <div class="logo-box">
+                <img src="{% static 'img/logo2.png' %}" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<!-- your page content here -->
+{% endblock %}

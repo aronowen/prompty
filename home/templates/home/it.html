@@ -1,0 +1,173 @@
+{% extends "home/base.html" %}
+{% block title %}IT Specialist · Prompt Scoring Arcade{% endblock %}
+
+{% block content %}
+<head>
+    {% load static i18n %}
+    <meta charset="UTF-8">
+    <title>IT Specialist · Prompt Scoring Arcade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+
+    <div class="crt-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo-lockup">
+            <span class="logo-mark">▶</span>
+            <h1 class="site-title">IT Specialist Scenario</h1>
+        </div>
+        <p class="site-tagline">
+            Craft a strong prompt as if you were briefing an AI to help write a clear announcement about a major system upgrade.
+        </p>
+    </header>
+
+    <main class="main-content">
+        <section class="role-layout">
+
+            <!-- LEFT: Scenario -->
+            <div class="role-panel role-panel-left">
+                <div class="role-panel-inner">
+            
+                    <h2 class="role-panel-title">
+                        {% trans "Your role: IT Specialist" %}
+                    </h2>
+            
+                    <p class="role-panel-meta">
+                        {% trans "Scenario · System Upgrade · Internal Comms" %}
+                    </p>
+            
+                    <div class="scenario-box">
+            
+                        <h3 class="scenario-heading">{% trans "Scenario" %}</h3>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You are an IT Specialist at a mid-sized organisation with around 250 staff working both in the office and remotely. Your team is preparing to roll out a major system upgrade that affects the company’s core tools, including email, file storage, and VPN access.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        The upcoming upgrade introduces several important improvements. Users will benefit from enhanced security through mandatory two-factor authentication, along with a cleaner and faster webmail interface. File storage and sharing rules will be updated to improve consistency and safety across the organisation. In addition, there will be short periods of planned downtime over a single weekend to complete the upgrade safely.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You are aware that many of your colleagues are not technical and may feel overwhelmed by system changes. Some may ignore long or complicated emails, and others may miss critical instructions unless the information is presented in a clear, structured, and approachable way.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Your task is to send an internal announcement that explains what is changing and why the upgrade is happening now. The message should highlight the main benefits in plain, accessible language, clearly outline the key dates and expected downtime, guide staff through any required actions such as setting up two-factor authentication, and direct them to the appropriate place for help or training.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You want to use an AI assistant to help draft this announcement. Your goal is to write a prompt that gives the AI enough information to produce a clear, accurate, and reassuring message for colleagues with mixed levels of technical confidence.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Your prompt should include context about the organisation and the tools being upgraded, details about the audience, and constraints such as the desired tone—calm, supportive, and not alarmist—along with guidance on length and any specific policies, requirements, or wording the AI should follow or avoid.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-hint">
+                        {% blocktrans trimmed %}
+                        Hint: Imagine you are briefing a helpdesk engineer to write the announcement for you. What information would they need to ensure staff do not panic, do not ignore the message, and actually follow the steps?
+                        {% endblocktrans %}
+                        </p>
+            
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Prompt form -->
+            <div class="role-panel role-panel-right">
+                <div class="role-panel-inner">
+                    <h2 class="role-panel-title">Submit your prompt</h2>
+                    <p class="role-panel-meta">
+                        {% trans "We’ll score how well your prompt guides the AI to respond with empathy and clarity."%}
+                    </p>
+
+                    <form method="post" class="prompt-form">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="form-errors">
+                                {% for error in form.non_field_errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="field-group">
+                            <label for="{{ form.name.id_for_label }}" class="field-label">
+                                {% trans "Your name"%}
+                            </label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="field-error">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-group field-group-textarea">
+                            <label for="{{ form.prompt.id_for_label }}" class="field-label">
+                                {% trans "Your AI prompt" %}
+                                <span class="field-label-extra">
+                                    ({% trans "describe the support reply you want the AI to draft" %})
+                                </span>
+                            </label>
+                            {{ form.prompt }}
+                            {% if form.prompt.errors %}
+                                <div class="field-error">
+                                    {% for error in form.prompt.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="submit-row">
+                            <button type="submit" class="btn-primary">
+                                {% trans "Submit prompt for scoring ⮕" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-dot"></span>
+    
+        <span class="footer-text">
+            {% trans "Prompt Scoring Arcade · v0.1" %}
+        </span>
+    
+        <div class="footer-logos">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.svg' %}" class="footer-logo">
+            </div>
+            <div class="logo-box">
+                <img src="{% static 'img/logo2.png' %}" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<!-- your page content here -->
+{% endblock %}

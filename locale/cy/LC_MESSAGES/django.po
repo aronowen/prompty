@@ -1,0 +1,1073 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: prompty\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-12-08 13:53+0000\n"
+"PO-Revision-Date: 2025-12-05 10:40+0000\n"
+"Last-Translator: Aron <your@email>\n"
+"Language-Team: Welsh\n"
+"Language: cy\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n==1) ? 0 : (n==2) ? 1 : (n != 8 && n != "
+"11) ? 2 : 3;\n"
+
+#: home/templates/home/base.html:7 home/templates/home/home.html:3
+#: home/templates/home/home.html:7 home/templates/home/home.html:18
+msgid "Prompt Scoring Arcade"
+msgstr "Arcêd Sgorio Prydlon"
+
+#: home/templates/home/base.html:25
+msgid "Home"
+msgstr "Cartref"
+
+#: home/templates/home/base.html:26
+msgid "Team"
+msgstr "Tîm"
+
+#: home/templates/home/base.html:27
+msgid "Leaderboard"
+msgstr "Bwrdd Arweinwyr"
+
+#: home/templates/home/cs.html:8
+#, fuzzy
+#| msgid "Customer Support Agent  Prompt Scoring Arcade"
+msgid "Customer Support Agent · Prompt Scoring Arcade"
+msgstr "Arcêd Sgorio Prompt Asiant Cymorth Cwsmeriaid"
+
+#: home/templates/home/cs.html:19
+msgid "Customer Support Agent Scenario"
+msgstr "Senario Asiant Cymorth Cwsmeriaid"
+
+#: home/templates/home/cs.html:22
+msgid ""
+"Craft a strong prompt as if you were briefing an AI to help draft a calm, "
+"clear response to a frustrated customer."
+msgstr ""
+"Crefftwch awgrym cryf fel petaech chi'n briffio AI i helpu i ddrafftio "
+"tawelwch, ymateb clir i gwsmer rhwystredig."
+
+#: home/templates/home/cs.html:33
+msgid "Your role: Customer Support Agent"
+msgstr "Eich rôl: Asiant Cymorth Cwsmeriaid"
+
+#: home/templates/home/cs.html:37
+#, fuzzy
+#| msgid "Scenario  Email Response  De-escalation"
+msgid "Scenario · Email Response · De-escalation"
+msgstr "Senario Ymateb E-bost Dad-ddwysáu"
+
+#: home/templates/home/cs.html:42 home/templates/home/cw.html:38
+#: home/templates/home/da.html:42 home/templates/home/hr.html:38
+#: home/templates/home/it.html:43 home/templates/home/ms.html:43
+#: home/templates/home/pd.html:43
+msgid "Scenario"
+msgstr "Senario"
+
+#: home/templates/home/cs.html:45
+msgid ""
+"You are a Customer Support Agent for a subscription-based productivity app "
+"used by freelancers and small teams. A long-time customer has sent an angry "
+"email after their account was unexpectedly locked due to non-payment caused "
+"by an expired card."
+msgstr ""
+"Rydych chi’n Asiant Cymorth Cwsmeriaid ar gyfer ap cynhyrchiant ar sail "
+"tanysgrifiad a ddefnyddir gan weithwyr llawrydd a thimau bach. Mae cwsmer "
+"hirdymor wedi anfon e-bost dig ar ôl i’w gyfrif gael ei gloi’n annisgwyl "
+"oherwydd diffyg taliad a achoswyd gan gerdyn sydd wedi dod i ben."
+
+#: home/templates/home/cs.html:51
+msgid ""
+"In their message, the customer explains that they rely on the app daily to "
+"run their business, express frustration that they received no useful warning "
+"before being locked out, mention that they have an urgent deadline and are "
+"losing money as a result, and threaten to cancel their subscription and "
+"leave a negative review."
+msgstr ""
+"Yn eu neges, mae’r cwsmer yn esbonio eu bod yn dibynnu ar yr ap bob dydd i "
+"redeg eu busnes, yn mynegi rhwystredigaeth nad oedden nhw wedi cael unrhyw "
+"rybudd defnyddiol cyn cael eu cloi allan, yn sôn bod ganddyn nhw ddyddiad "
+"cau brys ac eu bod yn colli arian o ganlyniad, ac yn bygwth canslo eu "
+"tanysgrifiad a gadael adolygiad negyddol."
+
+#: home/templates/home/cs.html:57
+msgid ""
+"After checking the account, you confirm that two payment attempts failed "
+"because of an expired card, automated reminder emails were sent but may have "
+"landed in spam, and you are authorised to offer a one-time goodwill credit "
+"along with temporary reactivation of the account."
+msgstr ""
+"Ar ôl gwirio’r cyfrif, rydych chi’n cadarnhau i ddau ymgais talu fethu "
+"oherwydd cerdyn sydd wedi dod i ben, anfonwyd e-byst atgoffa awtomataidd ond "
+"mae’n bosib eu bod wedi mynd i’r sbam, ac rydych chi’n cael cynnig credyd "
+"ewyllys da unwaith ynghyd ag ail-ysgogi dros dro ar y cyfrif."
+
+#: home/templates/home/cs.html:63
+msgid ""
+"Your task is to write a prompt that you would give to an AI assistant to "
+"help you draft a reply to this customer. The response should acknowledge "
+"their frustration, apologise appropriately, explain what happened in plain "
+"non-technical language, offer a concrete resolution such as temporary "
+"reactivation and steps to update billing, and reassure them about what will "
+"happen next and how they can avoid similar issues in the future."
+msgstr ""
+"Dyma’ch tasg: ysgrifennu ciwb y byddech chi’n ei roi i gynorthwyydd AI i’ch "
+"helpu i lunio ymateb i’r cwsmer hwn. Dylai’r ymateb gydnabod eu "
+"rhwystredigaeth, ymddiheuro’n briodol, egluro beth ddigwyddodd mewn iaith "
+"syml, ddim yn dechnegol, cynnig ateb pendant megis ail-ysgogi dros dro a "
+"chamau i ddiweddaru bilio, ac yna eu sicrhau ynghylch beth fydd yn digwydd "
+"nesaf a sut y gallan nhw osgoi problemau tebyg yn y dyfodol."
+
+#: home/templates/home/cs.html:69
+msgid ""
+"Your prompt should give the AI clear context about the situation, the tone "
+"you want to achieve—calm, empathetic, and professional—and include any "
+"constraints such as desired length, structure, phrases to avoid, or internal "
+"policy limits that the AI must respect."
+msgstr ""
+"Dylai eich ciwb roi cyd-destun clir i’r AI am y sefyllfa, y naws rydych chi "
+"am ei chyflawni—tawel, empathig ac yn broffesiynol—ac gynnwys unrhyw "
+"gyfyngiadau megis hyd dymunol, strwythur, ymadroddion i’w hosgoi, neu "
+"gyfyngiadau polisi mewnol y mae’n rhaid i’r AI eu parchu."
+
+#: home/templates/home/cs.html:84 home/templates/home/cw.html:85
+#: home/templates/home/da.html:83 home/templates/home/it.html:96
+#: home/templates/home/ms.html:85 home/templates/home/pd.html:85
+msgid ""
+"We’ll score how well your prompt guides the AI to respond with empathy and "
+"clarity."
+msgstr ""
+"Byddwn yn sgorio pa mor dda mae eich ciwb yn arwain yr AI i ymateb gyda "
+"chydymdeimlad ac eglurder."
+
+#: home/templates/home/cs.html:100 home/templates/home/cw.html:101
+#: home/templates/home/da.html:99 home/templates/home/hr.html:96
+#: home/templates/home/it.html:112 home/templates/home/ms.html:101
+#: home/templates/home/pd.html:101
+msgid "Your name"
+msgstr "Eich enw"
+
+#: home/templates/home/cs.html:114 home/templates/home/cw.html:115
+#: home/templates/home/da.html:113 home/templates/home/hr.html:110
+#: home/templates/home/it.html:126 home/templates/home/ms.html:115
+#: home/templates/home/pd.html:115
+msgid "Your AI prompt"
+msgstr "Eich ciwb AI"
+
+#: home/templates/home/cs.html:116 home/templates/home/cw.html:117
+#: home/templates/home/da.html:115 home/templates/home/hr.html:112
+#: home/templates/home/it.html:128 home/templates/home/ms.html:117
+#: home/templates/home/pd.html:117
+msgid "describe the support reply you want the AI to draft"
+msgstr "disgrifiwch yr ymateb cymorth rydych chi am i’r AI ei lunio"
+
+#: home/templates/home/cs.html:131 home/templates/home/cw.html:132
+#: home/templates/home/da.html:130 home/templates/home/hr.html:127
+#: home/templates/home/it.html:143 home/templates/home/ms.html:132
+#: home/templates/home/pd.html:132
+msgid "Submit prompt for scoring ⮕"
+msgstr "Cyflwyno'r ciwb i’w sgorio ⮕"
+
+#: home/templates/home/cs.html:145 home/templates/home/cw.html:146
+#: home/templates/home/da.html:144 home/templates/home/home.html:142
+#: home/templates/home/hr.html:141 home/templates/home/it.html:157
+#: home/templates/home/ms.html:146 home/templates/home/pd.html:146
+msgid "Prompt Scoring Arcade · v0.1"
+msgstr "Arcêd Sgorio Ciwbiau · f0.1"
+
+#: home/templates/home/cw.html:8
+msgid "Copywriter · Prompt Scoring Arcade"
+msgstr "Copïwr · Arcêd Sgorio Ciwbiau"
+
+#: home/templates/home/cw.html:22
+msgid ""
+"Craft a strong prompt as if you were briefing an AI to write a launch email "
+"and landing page copy."
+msgstr ""
+"Crewch giwb cryf fel pe baech yn briffio AI i ysgrifennu e-bost lansio a "
+"chopi tudalen lanio."
+
+#: home/templates/home/cw.html:32
+#, fuzzy
+#| msgid "Your role: Customer Support Agent"
+msgid "Your role: Copywriter"
+msgstr "Eich rôl: Asiant Cymorth Cwsmeriaid"
+
+#: home/templates/home/cw.html:34
+#, fuzzy
+#| msgid "Scenario · UX Flow · Onboarding"
+msgid "Scenario · Email · Landing Page"
+msgstr "Senario · Llif UX · Ymuno Defnyddwyr"
+
+#: home/templates/home/cw.html:41
+msgid ""
+"You are a Copywriter for a small but growing SaaS company that helps "
+"freelancers and agencies manage their clients, proposals, and invoices in "
+"one place. The team is about to launch a new Client Portal feature."
+msgstr ""
+"Rydych chi’n Gopïwr ar gyfer cwmni SaaS bach sy’n tyfu ac sy’n helpu "
+"gweithwyr llawrydd ac asiantaethau i reoli eu cleientiaid, eu cynnig "
+"cynigion a’u hanfonebau i gyd mewn un lle. Mae’r tîm ar fin lansio nodwedd "
+"Portal Cleient newydd."
+
+#: home/templates/home/cw.html:47
+msgid ""
+"The Client Portal allows customers to share project timelines, files, and "
+"updates in one secure space, enable clients to approve proposals and sign "
+"documents online, reduce back-and-forth email threads and missed "
+"attachments, and give clients a single place to see what’s happening next."
+msgstr ""
+"Mae’r Portal Cleient yn caniatáu i gwsmeriaid rannu llinellau amser "
+"prosiect, ffeiliau a diweddariadau mewn un gofod diogel; galluogi "
+"cleientiaid i gymeradwyo cynigion ac arwyddo dogfennau ar-lein; lleihau "
+"edafedd e-byst yn ôl ac ymlaen a ffeiliau cysylltiedig a gollwyd; ac yn rhoi "
+"un lle clir i gleientiaid weld beth sy’n dod nesaf."
+
+#: home/templates/home/cw.html:53
+msgid ""
+"You need to brief an AI assistant to help you draft both a launch email for "
+"existing customers announcing the Client Portal and the key sections of a "
+"landing page, including the headline, subheading, benefits, and call to "
+"action."
+msgstr ""
+"Mae angen i chi friffio cynorthwyydd AI i’ch helpu i lunio e-bost lansio ar "
+"gyfer cwsmeriaid presennol yn cyhoeddi’r Portal Cleient, ynghyd â phrif "
+"adrannau tudalen lanio gan gynnwys y pennawd, yr is-bennawd, y manteision "
+"a’r alwad i weithredu."
+
+#: home/templates/home/cw.html:59
+msgid ""
+"The audience is time-poor freelancers and small agencies who juggle multiple "
+"clients and dislike admin. The tone should be clear, energetic, and "
+"reassuring, emphasising saving time, reducing chaos, and helping them appear "
+"more professional to their clients."
+msgstr ""
+"Y gynulleidfa yw gweithwyr llawrydd a chwmnïau bach sy’n brin o amser, yn "
+"rheoli nifer o gleientiaid ac yn casáu gwaith papur. Dylai’r naws fod yn "
+"glir, egniol ac yn dawelgar—yn pwysleisio arbed amser, lleihau anhrefn ac eu "
+"helpu i ymddangos yn fwy proffesiynol i’w cleientiaid."
+
+#: home/templates/home/cw.html:65
+msgid ""
+"Your task is to write a prompt that you would give to the AI assistant to "
+"generate this email and landing page copy. Your prompt should include clear "
+"context about the product and audience, the goals of the campaign, and "
+"constraints such as tone of voice, structure, word count ranges, and any "
+"phrases or clichés to avoid."
+msgstr ""
+"Eich tasg yw ysgrifennu ciwb y byddech yn ei roi i’r cynorthwyydd AI i "
+"gynhyrchu’r e-bost a’r copi tudalen lanio. Dylai’ch ciwb gynnwys cyd-destun "
+"clir am y cynnyrch a’r gynulleidfa, nodau’r ymgyrch, a chyfyngiadau megis "
+"naws yr iaith, strwythur, ystod hyd geiriau, ac unrhyw ymadroddion neu "
+"glisheu i’w hosgoi."
+
+#: home/templates/home/cw.html:71
+msgid ""
+"Hint: Imagine you’re briefing a junior copywriter. What do they need so the "
+"first draft feels “on brand” and requires only light editing?"
+msgstr ""
+"Awgrym: Dychmygwch eich bod yn briffio copiwr iau. Beth fyddai ei angen "
+"arnynt fel bod y drafft cyntaf yn teimlo’n “on brand” ac yn gofyn am olygu "
+"ysgafn yn unig?"
+
+#: home/templates/home/da.html:34
+msgid "Your role: Data Analyst"
+msgstr "Eich rôl: Dadansoddwr Data"
+
+#: home/templates/home/da.html:38
+msgid "Scenario · Reporting · Stakeholder Comms"
+msgstr "Senario · Adrodd · Cyfathrebu â Rhanddeiliaid"
+
+#: home/templates/home/da.html:45
+msgid ""
+"You are a Data Analyst at a growing SaaS company that provides a web "
+"platform for small businesses. Each month you produce a Product Usage and "
+"Adoption Dashboard that tracks how actively customers are engaging with key "
+"features."
+msgstr ""
+"Rydych chi’n Ddadansoddwr Data mewn cwmni SaaS sy’n tyfu ac sy’n darparu "
+"platfform gwe i fusnesau bach. Bob mis rydych chi’n cynhyrchu Dangosiad "
+"Defnydd a Mabwysiadu Cynnyrch sy’n olrhain pa mor weithgar mae cwsmeriaid yn "
+"ymgysylltu â nodweddion allweddol."
+
+#: home/templates/home/da.html:51
+msgid ""
+"This month’s dashboard highlights several notable patterns. Overall logins "
+"have increased, but one of the core product features has experienced a clear "
+"and meaningful drop in usage. New customers appear to be adopting key "
+"features more quickly than long-term customers, and churn risk is rising "
+"within a particular customer segment. Additionally, a recent UX change seems "
+"to have altered behaviour across two major user flows."
+msgstr ""
+"Mae dangosiad mis hwn yn tynnu sylw at sawl patrwm nodedig. Mae "
+"mewngofnodion cyffredinol wedi cynyddu, ond mae un nodwedd graidd wedi gweld "
+"gostyngiad amlwg yn ei defnydd. Mae cwsmeriaid newydd yn ymddangos yn fwy "
+"cyflym i fabwysiadu nodweddion allweddol na chwsmeriaid tymor hir, ac mae’r "
+"risg chwalu’n cynyddu mewn un segment penodol. Yn ogystal, mae newid "
+"diweddar yn y profiad defnyddiwr wedi newid ymddygiad ar draws dwy llif "
+"ddefnyddwyr."
+
+#: home/templates/home/da.html:57
+msgid ""
+"Your task is to send a summary update to the leadership team and product "
+"managers. In this update you should explain what trends you observe in the "
+"data, why these trends matter for the business, and what potential "
+"decisions, risks, or follow-up questions emerge from the patterns you have "
+"identified."
+msgstr ""
+"Eich tasg yw anfon crynodeb at y tîm arweinyddiaeth a’r rheolwyr cynnyrch. "
+"Dylech egluro pa dueddiadau sy’n ymddangos yn y data, pam eu bod yn bwysig i "
+"’r busnes, a pha benderfyniadau, risgiau neu gwestiynau dilynol sy’n codi "
+"o’r patrymau hynny."
+
+#: home/templates/home/da.html:63
+msgid ""
+"Write a prompt that you would give to an AI assistant to help you draft this "
+"summary. Your prompt should include clear context about the dashboard, the "
+"intended audience of non-technical leaders, and specific instructions about "
+"the structure of the summary, such as highlighting key insights, explaining "
+"the impact, and suggesting recommended next steps."
+msgstr ""
+"Ysgrifennwch giwb y byddech yn ei roi i gynorthwyydd AI i’ch helpu i lunio’r "
+"crynodeb hwn. Dylai’ch ciwb gynnwys cyd-destun clir am y dangosiad, y "
+"gynulleidfa darged o arweinwyr annechnegol, ac yn ogystal cyfarwyddiadau "
+"penodol ar strwythur y crynodeb, gan gynnwys prif fewnwelediadau, effaith, a "
+"chamau nesaf argymelledig."
+
+#: home/templates/home/da.html:69
+msgid ""
+"Hint: Imagine you are briefing a consultant who has never seen your product "
+"or dataset before. What information would they need to produce a clear, "
+"confident, and actionable summary?"
+msgstr ""
+"Awgrym: Dychmygwch eich bod yn briffio ymgynghorydd nad yw erioed wedi gweld "
+"eich cynnyrch na’ch set ddata o’r blaen. Pa wybodaeth fyddai’n angenrheidiol "
+"iddo gynhyrchu crynodeb clir, hyderus ac ymarferol?"
+
+#: home/templates/home/home.html:21
+msgid ""
+"Select a role, drop in a prompt, and let the retro engine score your skills."
+msgstr ""
+"Dewiswch rôl, rhowch giwb i mewn, a gadewch i'r peiriant retro sgorio’ch "
+"sgiliau."
+
+#: home/templates/home/home.html:27
+msgid "Choose your role"
+msgstr "Dewiswch eich rôl"
+
+#: home/templates/home/home.html:29
+msgid ""
+"Pick a lane below or let fate decide with the <span "
+"class=\"highlight\">Random Role</span>."
+msgstr ""
+"Dewiswch lôn isod neu gadewch i dynged benderfynu gyda'r <span "
+"class=\"highlight\">Rôl Ar Hap</span>."
+
+#: home/templates/home/home.html:40
+msgid "HR Manager"
+msgstr "Rheolwr Adnoddau Dynol"
+
+#: home/templates/home/home.html:43
+msgid ""
+"Score prompts for recruitment, performance reviews, and tricky people "
+"problems."
+msgstr ""
+"Sgorïwch giwbiau ar gyfer recriwtio, adolygiadau perfformiad, a sefyllfaoedd "
+"pobl anodd."
+
+#: home/templates/home/home.html:45
+msgid "Load HR arena ⮕"
+msgstr "Llwytho arena AD ⮕"
+
+#: home/templates/home/home.html:52
+msgid "Data Analyst"
+msgstr "Dadansoddwr Data"
+
+#: home/templates/home/home.html:55
+msgid ""
+"Evaluate prompts that explain dashboards, trends, and gnarly spreadsheets."
+msgstr ""
+"Gwerthuswch giwbiau sy’n egluro dangosfyrddau, tueddiadau a thaflenni "
+"cymhleth."
+
+#: home/templates/home/home.html:57
+msgid "Load data arena ⮕"
+msgstr "Llwytho arena data ⮕"
+
+#: home/templates/home/home.html:64
+msgid "Marketing Strategist"
+msgstr "Strategaethydd Marchnata"
+
+#: home/templates/home/home.html:67
+msgid ""
+"Judge prompts for campaigns, landing pages, and social copy that actually "
+"converts."
+msgstr ""
+"Barnwch giwbiau ar gyfer ymgyrchoedd, tudalennau glanio a chopïau "
+"cymdeithasol sy’n trosi’n wirioneddol."
+
+#: home/templates/home/home.html:69
+msgid "Load marketing arena ⮕"
+msgstr "Llwytho arena marchnata ⮕"
+
+#: home/templates/home/home.html:76
+msgid "Product Designer"
+msgstr "Dylunydd Cynnyrch"
+
+#: home/templates/home/home.html:79
+msgid "Assess prompts for UX flows, user research, and delightful microcopy."
+msgstr ""
+"Aseswch giwbiau ar gyfer llifau UX, ymchwil defnyddwyr a microgopi hyfryd."
+
+#: home/templates/home/home.html:81
+msgid "Load design arena ⮕"
+msgstr "Llwytho arena dylunio ⮕"
+
+#: home/templates/home/home.html:88
+msgid "Customer Support Agent"
+msgstr "Asiant Cymorth Cwsmeriaid"
+
+#: home/templates/home/home.html:91
+msgid ""
+"Rate prompts that handle complaints, refunds, and “have you tried turning it "
+"off?”."
+msgstr ""
+"Sgorïwch giwbiau sy’n delio â chwynion, ad-daliadau, ac “ydych chi wedi trio "
+"ei ddiffodd ac ymlaen eto?”."
+
+#: home/templates/home/home.html:93
+msgid "Load support arena ⮕"
+msgstr "Llwytho arena cymorth ⮕"
+
+#: home/templates/home/home.html:100
+msgid "Copywriter"
+msgstr "Ysgrifennwr Copi"
+
+#: home/templates/home/home.html:103
+msgid ""
+"Score prompts for taglines, email sequences, and content that actually "
+"sounds human."
+msgstr ""
+"Sgorïwch giwbiau ar gyfer sloganau, dilyniannau e-bost, a chynnwys sy’n "
+"swnio’n wirioneddol ddynol."
+
+#: home/templates/home/home.html:105
+msgid "Load copy arena ⮕"
+msgstr "Llwytho arena copi ⮕"
+
+#: home/templates/home/home.html:112
+msgid "IT Specialist"
+msgstr "Arbenigwr TG"
+
+#: home/templates/home/home.html:115
+msgid ""
+"Evaluate prompts for troubleshooting, documentation, and “my printer is "
+"possessed”."
+msgstr ""
+"Gwerthuswch giwbiau ar gyfer datrys problemau, dogfennau, ac “mae fy "
+"argraffydd wedi’i feddiannu”."
+
+#: home/templates/home/home.html:117
+msgid "Load IT arena ⮕"
+msgstr "Llwytho arena TG ⮕"
+
+#: home/templates/home/home.html:125
+msgid "Random Role"
+msgstr "Rôl Ar Hap"
+
+#: home/templates/home/home.html:129
+msgid ""
+"Let the arcade pick one of the seven roles at random and throw you straight "
+"into the challenge."
+msgstr ""
+"Gadewch i’r arcêd ddewis un o’r saith rôl ar hap a’ch taflu’n syth i’r her."
+
+#: home/templates/home/home.html:131
+msgid "I’m feeling lucky ⮕"
+msgstr "Rwy’n teimlo’n ffodus ⮕"
+
+#: home/templates/home/hr.html:32
+msgid "Your role: HR Manager"
+msgstr "Eich rôl: Rheolwr Adnoddau Dynol"
+
+#: home/templates/home/hr.html:34
+msgid "Scenario · Internal Comms · AI Adoption"
+msgstr "Senario · Cyfathrebu Mewnol · Mabwysiadu AI"
+
+#: home/templates/home/hr.html:41
+msgid ""
+"You are the HR Manager at a mid-sized tech company with around 120 employees "
+"working across engineering, product, sales, and operations. Next month, the "
+"organisation is running its first ever AI Application Day—a full-day "
+"internal event where staff can learn about AI tools, experiment with them, "
+"and propose ideas for how AI could improve their workflows."
+msgstr ""
+"Rydych chi’n Rheolwr Adnoddau Dynol mewn cwmni technoleg canolig ei faint "
+"gyda thua 120 o staff ar draws peirianneg, cynnyrch, gwerthu a "
+"gweithrediadau. Mis nesaf, mae’r sefydliad yn cynnal ei Ddiwrnod AI cyntaf "
+"erioed—diwrnod llawn i staff ddysgu am offer AI, profi syniadau, a chynnig "
+"ffyrdd o wella llif gwaith drwy AI."
+
+#: home/templates/home/hr.html:47
+#, fuzzy
+#| msgid ""
+#| "Your task is to draft a clear internal email announcing this event to all "
+#| "staff. In your message, explain the purpose of AI Application Day and why "
+#| "the company is launching it now, outline the date, time, and format of "
+#| "the day, and describe what staff need to do in advance such as "
+#| "registering for workshops or bringing example tasks to explore."
+msgid ""
+"Your task is to draft a clear internal email announcing this event to all "
+"staff. In your message, explain the purpose of AI Application Day and why "
+"the company is launching it now, outline the date, time, and format of the "
+"day, and describe what staff need to do in advance such as registering for "
+"sessions or bringing example tasks to explore."
+msgstr ""
+"Eich tasg yw llunio e-bost mewnol clir yn cyhoeddi’r digwyddiad. Dylech "
+"esbonio pwrpas y Diwrnod AI a pham ei fod yn digwydd nawr, nodi’r dyddiad, "
+"yr amser a’r fformat, a disgrifio’r hyn y dylai’r staff ei wneud ymlaen llaw "
+"megis cofrestru ar gyfer gweithdai neu ddod ag enghreifftiau o dasgau i’w "
+"harchwilio."
+
+#: home/templates/home/hr.html:53
+#, fuzzy
+#| msgid ""
+#| "You should also communicate how ideas and experiments from the day will "
+#| "be captured and followed up afterwards, and clarify any expectations "
+#| "around participation, behaviour, data security, and responsible use of AI "
+#| "tools within the organisation."
+msgid ""
+"You should also communicate how ideas and experiments from the day will be "
+"captured and followed up afterwards, and clarify any expectations around "
+"participation, behaviour, data security, and the responsible use of AI tools "
+"within the organisation."
+msgstr ""
+"Dylech hefyd egluro sut fydd syniadau ac arbrofion y diwrnod yn cael eu "
+"casglu a’u dilyn i fyny, a nodi disgwyliadau am ymddygiad, diogelwch data, a "
+"defnydd cyfrifol o offer AI yn y sefydliad."
+
+#: home/templates/home/hr.html:59
+msgid ""
+"Write a prompt that you would give to an AI assistant to help you produce "
+"this email. Your prompt should include clear context, specific instructions, "
+"and relevant constraints such as tone, length, and audience so that the AI "
+"can generate a high-quality first draft."
+msgstr ""
+"Ysgrifennwch giwb y byddech yn ei roi i gynorthwyydd AI i greu’r e-bost. "
+"Dylai’ch ciwb gynnwys cyd-destun clir, cyfarwyddiadau penodol a chyfyngiadau "
+"megis naws, hyd ac awdurdod fel y gall yr AI gynhyrchu drafft cyntaf o safon "
+"uchel."
+
+#: home/templates/home/hr.html:65
+msgid ""
+"Hint: Imagine you are delegating this task to a junior colleague who does "
+"not yet know the company well. What information would they need to get the "
+"email right on the first attempt?"
+msgstr ""
+"Awgrym: Dychmygwch eich bod yn dirprwyo’r dasg hon i gydweithiwr newydd nad "
+"yw’n adnabod y cwmni’n dda eto. Pa wybodaeth fyddai ei hangen arnynt i gael "
+"yr e-bost yn iawn y tro cyntaf?"
+
+#: home/templates/home/hr.html:80
+msgid ""
+"We will score how well your prompt guides the AI to respond with empathy and "
+"clarity."
+msgstr ""
+"Byddwn yn sgorio pa mor dda mae eich ciwb yn arwain yr AI i ymateb gyda "
+"chydymdeimlad ac eglurder."
+
+#: home/templates/home/it.html:34
+msgid "Your role: IT Specialist"
+msgstr "Eich rôl: Arbenigwr TG"
+
+#: home/templates/home/it.html:38
+msgid "Scenario · System Upgrade · Internal Comms"
+msgstr "Senario · Uwchraddio System · Cyfathrebu Mewnol"
+
+#: home/templates/home/it.html:46
+msgid ""
+"You are an IT Specialist at a mid-sized organisation with around 250 staff "
+"working both in the office and remotely. Your team is preparing to roll out "
+"a major system upgrade that affects the company’s core tools, including "
+"email, file storage, and VPN access."
+msgstr ""
+"Rydych chi’n Arbenigwr TG mewn sefydliad canolig ei faint gyda thua 250 o "
+"staff yn gweithio yn y swyddfa ac o bell. Mae eich tîm yn paratoi i gyflwyno "
+"uwchraddiad system mawr sy’n effeithio ar brif offer y cwmni, gan gynnwys e-"
+"bost, storio ffeiliau a mynediad VPN."
+
+#: home/templates/home/it.html:52
+msgid ""
+"The upcoming upgrade introduces several important improvements. Users will "
+"benefit from enhanced security through mandatory two-factor authentication, "
+"along with a cleaner and faster webmail interface. File storage and sharing "
+"rules will be updated to improve consistency and safety across the "
+"organisation. In addition, there will be short periods of planned downtime "
+"over a single weekend to complete the upgrade safely."
+msgstr ""
+"Bydd yr uwchraddiad yn cyflwyno sawl gwelliant pwysig. Bydd defnyddwyr yn "
+"elwa ar ddiogelwch uwch drwy ddilysu dau gam gorfodol, ynghyd ag wyneb we e-"
+"bost glanach a chyflymach. Bydd y rheolau ar gyfer storio a rhannu "
+"ffeiliau’n cael eu diweddaru i wella cysondeb a diogelwch ar draws y "
+"sefydliad. Yn ogystal, bydd cyfnodau byr o ddiffodd wedi’u cynllunio dros un "
+"penwythnos i gwblhau’r uwchraddiad yn ddiogel."
+
+#: home/templates/home/it.html:58
+msgid ""
+"You are aware that many of your colleagues are not technical and may feel "
+"overwhelmed by system changes. Some may ignore long or complicated emails, "
+"and others may miss critical instructions unless the information is "
+"presented in a clear, structured, and approachable way."
+msgstr ""
+"Rydych yn ymwybodol nad yw llawer o’ch cydweithwyr yn dechnegol ac efallai y "
+"byddan nhw’n teimlo’n llethu gan newidiadau system. Gall rhai anwybyddu e-"
+"byst hir neu gymhleth, ac eraill fethu cyfarwyddiadau pwysig oni bai bod yr "
+"wybodaeth yn cael ei chyflwyno mewn ffordd glir, strwythuredig ac hawdd ei "
+"dilyn."
+
+#: home/templates/home/it.html:64
+msgid ""
+"Your task is to send an internal announcement that explains what is changing "
+"and why the upgrade is happening now. The message should highlight the main "
+"benefits in plain, accessible language, clearly outline the key dates and "
+"expected downtime, guide staff through any required actions such as setting "
+"up two-factor authentication, and direct them to the appropriate place for "
+"help or training."
+msgstr ""
+"Eich tasg yw anfon cyhoeddiad mewnol sy’n egluro beth sy’n newid a pham "
+"mae’r uwchraddiad yn digwydd nawr. Dylai’r neges amlygu’r prif fanteision "
+"mewn iaith syml a hygyrch, nodi’r dyddiadau allweddol a’r diffodd "
+"disgwyliedig, tywys staff drwy unrhyw gamau angenrheidiol megis gosod dilysu "
+"dau gam, ac yna eu cyfeirio at y lle iawn am gymorth neu hyfforddiant."
+
+#: home/templates/home/it.html:70
+msgid ""
+"You want to use an AI assistant to help draft this announcement. Your goal "
+"is to write a prompt that gives the AI enough information to produce a "
+"clear, accurate, and reassuring message for colleagues with mixed levels of "
+"technical confidence."
+msgstr ""
+"Rydych eisiau defnyddio cynorthwyydd AI i helpu llunio’r cyhoeddiad hwn. "
+"Eich nod yw ysgrifennu ciwb sy’n rhoi digon o wybodaeth i’r AI greu neges "
+"glir, gywir ac atyniadol i gydweithwyr ag amryw lefelau o hyder technegol."
+
+#: home/templates/home/it.html:76
+msgid ""
+"Your prompt should include context about the organisation and the tools "
+"being upgraded, details about the audience, and constraints such as the "
+"desired tone—calm, supportive, and not alarmist—along with guidance on "
+"length and any specific policies, requirements, or wording the AI should "
+"follow or avoid."
+msgstr ""
+"Dylai eich ciwb gynnwys cyd-destun am y sefydliad a’r offer sy’n cael eu "
+"huwchraddio, manylion am y gynulleidfa, a chyfyngiadau megis naws y neges—"
+"dawel, cefnogol, ac nid yn banigol—ynghyd â chanllawiau ar hyd y neges ac "
+"unrhyw bolisïau neu eiriad penodol y dylai’r AI ei ddilyn neu ei osgoi."
+
+#: home/templates/home/it.html:82
+msgid ""
+"Hint: Imagine you are briefing a helpdesk engineer to write the announcement "
+"for you. What information would they need to ensure staff do not panic, do "
+"not ignore the message, and actually follow the steps?"
+msgstr ""
+"Awgrym: Dychmygwch eich bod yn briffio peiriannydd desg gymorth i "
+"ysgrifennu’r cyhoeddiad ar eich cyfer. Pa wybodaeth fyddai ei hangen arnynt "
+"i sicrhau nad yw staff yn panicio, nad ydyn nhw’n anwybyddu’r neges, ac yn "
+"dilyn y camau oddi yno?"
+
+#: home/templates/home/leaderboard.html:3
+#: home/templates/home/leaderboard.html:9
+msgid "Leaderboard · Prompt Scoring Arcade"
+msgstr "Tabl Sgorio · Arcêd Sgorio Ciwbiau"
+
+#: home/templates/home/leaderboard.html:21
+msgid "Prompt Leaderboard"
+msgstr "Tabl Sgorio Ciwbiau"
+
+#: home/templates/home/leaderboard.html:25
+#, fuzzy
+#| msgid "Top 20 prompts across all roles, ranked by total score out of 1000."
+msgid ""
+"\n"
+"            Top 20 prompts across all roles, ranked by total score out of "
+"1000.\n"
+"            "
+msgstr ""
+"Y 20 ciwb uchaf ar draws pob rôl, wedi’u rhestru yn ôl sgôr cyfanswm allan o "
+"1000."
+
+#: home/templates/home/leaderboard.html:34
+msgid "High scores"
+msgstr "Sgorau uchel"
+
+#: home/templates/home/leaderboard.html:37
+#, fuzzy
+#| msgid ""
+#| "Arcade legends only. Higher scores mean clearer persona, task, context, "
+#| "and format."
+msgid ""
+"\n"
+"                Arcade legends only. Higher scores mean clearer persona, "
+"task, context, and format.\n"
+"                "
+msgstr ""
+"Chwedlau’r arcêd yn unig. Mae sgoriau uwch yn golygu persona, tasg, cyd-"
+"destun a fformat llawer cliriach."
+
+#: home/templates/home/leaderboard.html:47
+msgid "#"
+msgstr "#"
+
+#: home/templates/home/leaderboard.html:48
+msgid "Name"
+msgstr "Enw"
+
+#: home/templates/home/leaderboard.html:49
+msgid "Score"
+msgstr "Sgôr"
+
+#: home/templates/home/leaderboard.html:50
+msgid "Prompt Preview"
+msgstr "Rhagolwg o’r Ciwb"
+
+#: home/templates/home/leaderboard.html:91
+msgid "No prompts have been scored yet. Be the first to hit the arcade."
+msgstr ""
+"Nid oes unrhyw giwbiau wedi’u sgorio eto. Byddwch chi’r cyntaf i fynd i’r "
+"arcêd."
+
+#: home/templates/home/leaderboard.html:101
+msgid "Leaderboard · Prompt Scoring Arcade · v0.1"
+msgstr "Tabl Sgorio · Arcêd Sgorio Ciwbiau · f0.1"
+
+#: home/templates/home/ms.html:34
+msgid "Your role: Marketing Strategist"
+msgstr "Eich rôl: Strategaeth Marchnata"
+
+#: home/templates/home/ms.html:38
+msgid "Scenario · Campaign Planning · Go-To-Market"
+msgstr "Senario · Cynllunio Ymgyrch · Mynd-i’r-Farchnad"
+
+#: home/templates/home/ms.html:46
+msgid ""
+"You are the Marketing Strategist for a B2B SaaS company that helps small and "
+"mid-sized businesses manage their projects and clients. The product team has "
+"just released a new AI-powered task assistant that can suggest priorities, "
+"draft updates, and flag risks directly inside the platform."
+msgstr ""
+"Rydych chi’n Strategaeth Marchnata mewn cwmni SaaS B2B sy’n helpu busnesau "
+"bach a chanolig i reoli eu prosiectau a’u cleientiaid. Mae’r tîm cynnyrch "
+"wedi rhyddhau cynorthwyydd tasgau newydd sy’n cael ei bweru gan AI, sy’n "
+"gallu awgrymu blaenoriaethau, llunio diweddariadau ac amlygu risgiau yn y "
+"platfform ei hun."
+
+#: home/templates/home/ms.html:52
+msgid ""
+"In four weeks, you are running a launch campaign aimed at a mix of "
+"audiences. These include existing customers who may upgrade or expand their "
+"usage, new prospects who are currently comparing your tool with competing "
+"platforms, and partners or resellers who need a clear and compelling story "
+"to communicate to their clients."
+msgstr ""
+"Ymhen pedair wythnos, rydych chi’n rhedeg ymgyrch lansio sy’n targedu "
+"cymysgedd o gynulleidfaoedd. Mae’r rhain yn cynnwys cwsmeriaid presennol a "
+"allai uwchraddio neu ehangu eu defnydd, rhagolygon newydd sy’n cymharu eich "
+"offer â chystadleuwyr, a phartneriaid neu ailwerthwyr sydd angen stori glir "
+"a chryf i’w chyfleu i’w cleientiaid."
+
+#: home/templates/home/ms.html:58
+msgid ""
+"You want to use an AI assistant to help outline the campaign. You will need "
+"ideas for the key value propositions and messaging angles that should "
+"resonate with each audience group, recommendations on which channels to use "
+"such as email, social posts, in-app messages, webinars, or landing pages, a "
+"simple timeline covering the four weeks leading up to the launch, and "
+"example content pieces such as subject lines, hooks, social copy, or webinar "
+"titles."
+msgstr ""
+"Rydych am ddefnyddio cynorthwyydd AI i’ch helpu i amlinellu’r ymgyrch. Bydd "
+"angen syniadau arnoch ar gyfer prif werthoedd y cynnyrch a’r negeseuon sy’n "
+"apelio at bob cynulleidfa, ynghyd ag argymhellion ar ba sianeli i’w defnyddio"
+"—e-bost, cyfryngau cymdeithasol, negeseuon yn yr ap, gweminarau neu "
+"dudalennau glanio—yn ogystal ag amserlen syml ar gyfer y pedair wythnos cyn "
+"y lansiad, a darnau enghreifftiol megis teitlau, bachau a chopïau "
+"cymdeithasol."
+
+#: home/templates/home/ms.html:64
+msgid ""
+"Your task is to write a prompt that you would give to an AI assistant to "
+"help you generate this campaign plan. Your prompt should provide clear "
+"context about the product, outline the goals of the campaign, describe the "
+"target audiences, and include any constraints such as tone of voice, budget "
+"limitations, or required marketing channels."
+msgstr ""
+"Eich tasg yw ysgrifennu ciwb y byddech yn ei roi i gynorthwyydd AI i’ch "
+"helpu i gynhyrchu’r cynllun ymgyrch. Dylai’ch ciwb ddarparu cyd-destun clir "
+"am y cynnyrch, amlinellu nodau’r ymgyrch, disgrifio’r cynulleidfaoedd "
+"targed, ac wedi hynny gynnwys unrhyw gyfyngiadau megis naws, cyllideb neu "
+"sianeli marchnata dethol."
+
+#: home/templates/home/ms.html:70
+msgid ""
+"Hint: Imagine you are briefing a freelance strategist who has never seen "
+"your brand before. What information would they need to produce a focused, "
+"realistic, and on-brand plan?"
+msgstr ""
+"Awgrym: Dychmygwch eich bod yn briffio strategaeth annibynnol nad yw erioed "
+"wedi gweld eich brand o’r blaen. Pa wybodaeth fyddai ei hangen arnynt i "
+"gynhyrchu cynllun realistig, canolbwyntiedig ac ar frand?"
+
+#: home/templates/home/pd.html:34
+msgid "Your role: Product Designer"
+msgstr "Eich rôl: Dylunydd Cynnyrch"
+
+#: home/templates/home/pd.html:38
+msgid "Scenario · UX Flow · Onboarding"
+msgstr "Senario · Llif UX · Ymuno Defnyddwyr"
+
+#: home/templates/home/pd.html:46
+#, fuzzy
+#| msgid ""
+#| "You are a Product Designer for a collaborative workspace app used by "
+#| "small teams to organise projects, tasks, and shared documents. At "
+#| "present, new users sign up, land on a cluttered dashboard, and frequently "
+#| "abandon the product within the first few minutes."
+msgid ""
+"\n"
+"                        You are a Product Designer for a collaborative "
+"workspace app used by small teams to organise projects, tasks, and shared "
+"documents. At present, new users sign up, land on a cluttered dashboard, and "
+"frequently abandon the product within the first few minutes.\n"
+"                        "
+msgstr ""
+"Rydych chi’n Ddylunydd Cynnyrch ar gyfer ap gweithle cydweithredol sy’n cael "
+"ei ddefnyddio gan dimau bach i drefnu prosiectau, tasgau a dogfennau "
+"cydrannol. Ar hyn o bryd, mae defnyddwyr newydd yn cofrestru, glanio ar "
+"dangosfwrdd prysur, ac yn aml yn rhoi’r gorau i’r cynnyrch o fewn munudau."
+
+#: home/templates/home/pd.html:52
+#, fuzzy
+#| msgid ""
+#| "You have been asked to redesign the entire first-time user onboarding "
+#| "flow so that new users immediately understand the value of the product, "
+#| "complete a simple first-project setup in just a few guided steps, feel "
+#| "encouraged to invite at least one teammate, and finish the onboarding "
+#| "with a strong sense of what to do next."
+msgid ""
+"\n"
+"                        You have been asked to redesign the entire first-"
+"time user onboarding flow so that new users immediately understand the value "
+"of the product, complete a simple first-project setup in just a few guided "
+"steps, feel encouraged to invite at least one teammate, and finish the "
+"onboarding with a strong sense of what to do next.\n"
+"                        "
+msgstr ""
+"Rydych wedi cael eich gofyn i ailgynllunio’r broses ymuno gyfan fel bod "
+"defnyddwyr newydd yn deall gwerth y cynnyrch ar unwaith, yn cwblhau prosiect "
+"cychwynnol mewn ychydig o gamau syml, yn teimlo’n hyderus i wahodd o leiaf "
+"un cydweithiwr, ac yn gorffen y broses gyda dealltwriaeth glir o’r camau "
+"nesaf."
+
+#: home/templates/home/pd.html:58
+msgid ""
+"You want to use an AI assistant to help you think through this flow in "
+"detail. You would like the AI to propose a structured, step-by-step "
+"onboarding experience that outlines the narrative and messaging for each "
+"screen, identifies which UI elements should be highlighted or explained, "
+"suggests ways to keep the experience accessible and low-friction, and offers "
+"ideas for microcopy, tooltips, and helpful empty-state messages."
+msgstr ""
+"Rydych eisiau defnyddio cynorthwyydd AI i’ch helpu i feddwl drwy’r llif hwn "
+"yn fanwl. Hoffech i’r AI awgrymu profiad ymuno strwythuredig, cam wrth gam "
+"sy’n amlinellu’r naratif a’r negeseuon ar bob sgrin, yn nodi pa elfennau UI "
+"ddylai gael eu hamlygu neu’u hesbonio, yn awgrymu ffyrdd o gadw’r profiad yn "
+"hygyrch ac yn esmwyth, ac yn cynnig syniadau ar gyfer micro-gopi, "
+"awgrymiadau ac ysgogiadau defnyddiol pan fydd y sgrin yn wag."
+
+#: home/templates/home/pd.html:64
+msgid ""
+"Your task is to write a prompt that you would give to an AI assistant to "
+"generate this onboarding flow. Your prompt should include clear product "
+"context, details about your target users, the goals of the redesign, and any "
+"constraints such as tone, platform requirements, visual style guidelines, or "
+"technical limitations."
+msgstr ""
+"Eich tasg yw ysgrifennu ciwb y byddech yn ei roi i gynorthwyydd AI i "
+"gynhyrchu’r llif ymuno hwn. Dylai eich ciwb gynnwys cyd-destun clir am y "
+"cynnyrch, manylion am eich defnyddwyr targed, nodau’r ailgynllunio ac unrhyw "
+"gyfyngiadau megis naws, gofynion y platfform, canllawiau arddull weledol neu "
+"gyfyngiadau technegol."
+
+#: home/templates/home/pd.html:70
+msgid ""
+"Hint: Brief the AI as if you were handing the project over to another "
+"designer who has never seen your app. What information would they need to "
+"propose a realistic, user-centred onboarding flow?"
+msgstr ""
+"Awgrym: Briffiwch yr AI fel pe baech yn trosglwyddo’r prosiect i ddylunydd "
+"arall nad yw erioed wedi gweld eich ap o’r blaen. Pa wybodaeth fyddai ei "
+"hangen arno i awgrymu llif ymuno realistig sy’n canolbwyntio ar y defnyddiwr?"
+
+#: home/templates/home/result.html:4
+msgid "Result · Prompt Scoring Arcade"
+msgstr "Canlyniad · Arcêd Sgorio Ciwbiau"
+
+#: home/templates/home/result.html:10
+msgid "Your Score"
+msgstr "Eich Sgôr"
+
+#: home/templates/home/result.html:13
+#, python-format
+msgid ""
+"\n"
+"            Nice work, %(user_name)s. Here’s how your prompt performed.\n"
+"        "
+msgstr ""
+"\n"
+"            Da iawn, %(user_name)s. Dyma sut wnaeth eich ciwb berfformio.\n"
+"        "
+
+#: home/templates/home/result.html:23
+msgid "Total Score"
+msgstr "Sgôr Cyfanswm"
+
+#: home/templates/home/result.html:30
+msgid "Higher scores mean clearer persona, task, context, and format."
+msgstr ""
+"Mae sgoriau uwch yn golygu persona, tasg, cyd-destun a fformat llawer "
+"cliriach."
+
+#: home/templates/home/result.html:35
+msgid "Play again"
+msgstr "Chwaraewch eto"
+
+#: home/templates/home/result.html:38
+msgid "View leaderboard"
+msgstr "Gweld y tabl sgorio"
+
+#: home/templates/home/result.html:46
+msgid "Your Prompt"
+msgstr "Eich Ciwb"
+
+#: home/templates/home/team.html:4
+msgid "Team · Prompt Scoring Arcade"
+msgstr "Tîm · Arcêd Sgorio Ciwbiau"
+
+#: home/templates/home/team.html:10
+msgid "Meet the Team"
+msgstr "Cyfarfod â’r Tîm"
+
+#: home/templates/home/team.html:13
+msgid "Powered by creativity, curiosity, and far too much caffeine."
+msgstr "Wedi’i bweru gan greadigrwydd, chwilfrydedd, a gormod iawn o gaffein."
+
+#: home/templates/home/team.html:24 home/templates/home/team.html:26
+msgid "Aron Edward Owen"
+msgstr "Aron Edward Owen"
+
+#: home/templates/home/team.html:28
+msgid "Digital Innovation Manager"
+msgstr "Rheolwr Arloesi Digidol"
+
+#: home/templates/home/team.html:31
+msgid "Creativity"
+msgstr "Creadigrwydd"
+
+#: home/templates/home/team.html:32
+msgid "Leadership"
+msgstr "Arweinyddiaeth"
+
+#: home/templates/home/team.html:33
+msgid "AI Expertise"
+msgstr "Arbenigedd AI"
+
+#: home/templates/home/team.html:34
+msgid "Coffee Consumption"
+msgstr "Defnydd o Goffi"
+
+#: home/templates/home/team.html:38
+msgid ""
+"Aron leads digital innovation at M-SParc: building tools, designing systems, "
+"managing clusters, running events, and somehow still finding time to build "
+"full applications on weekends for fun."
+msgstr ""
+"Aron sy’n arwain arloesi digidol yn M-SParc: yn adeiladu offer, yn dylunio "
+"systemau, yn rheoli clwstyrau, yn trefnu digwyddiadau, ac rywsut dal yn dod "
+"o hyd i amser i adeiladu apiau llawn ar y penwythnosau er mwyn hwyl."
+
+#: home/templates/home/team.html:54 home/templates/home/team.html:56
+msgid "Elgan Edwards"
+msgstr "Elgan Edwards"
+
+#: home/templates/home/team.html:58
+msgid "Degree Apprentice"
+msgstr "Prentis Gradd"
+
+#: home/templates/home/team.html:61
+msgid "Problem Solving"
+msgstr "Datrys Problemau"
+
+#: home/templates/home/team.html:62
+msgid "Coding Speed"
+msgstr "Cyflymder Codio"
+
+#: home/templates/home/team.html:63
+msgid "Debugging Luck"
+msgstr "Lwc Dadfygio"
+
+#: home/templates/home/team.html:64
+msgid "Snack Efficiency"
+msgstr "Effeithlonrwydd Byrbrydau"
+
+#: home/templates/home/team.html:68
+msgid ""
+"Elgan is the engine behind many of the digital projects — building, testing, "
+"learning, and improving at breakneck speed. He is known for writing code "
+"that works on the first try… sometimes."
+msgstr ""
+"Elgan yw’r injan y tu ôl i lawer o’r prosiectau digidol — yn adeiladu, yn "
+"profi, yn dysgu ac yn gwella ar gyflymder brawychus. Mae’n enwog am "
+"ysgrifennu cod sy’n gweithio’r tro cyntaf… weithiau."
+
+#: home/templates/home/team.html:84 home/templates/home/team.html:86
+msgid "Jordan Eardley"
+msgstr "Jordan Eardley"
+
+#: home/templates/home/team.html:88
+msgid "Digital Innovation Officer"
+msgstr "Swyddog Arloesi Digidol"
+
+#: home/templates/home/team.html:91
+msgid "Tinkering"
+msgstr "Tincro"
+
+#: home/templates/home/team.html:92
+msgid "Vibe Coding"
+msgstr "Codio vibe"
+
+#: home/templates/home/team.html:93
+msgid "Curiosity Level"
+msgstr "Lefel Cwestiynu"
+
+#: home/templates/home/team.html:94
+msgid "Coffee Dependency"
+msgstr "Ddibyniaeth ar goffi"
+
+#: home/templates/home/team.html:98
+msgid ""
+"Jordan is Ar y Lôn — the team's resident tinkerer and vibe coder. Whether "
+"experimenting with emerging tech, wiring prototypes, or turning vague ideas "
+"into working demos, Jordan brings curiosity, energy, and a hands-on spirit "
+"that keeps the innovation engine running."
+msgstr ""
+"Jordan yw Ar y Lôn — tincerwr a chodwr vibe preswyl y tîm. Boed yn arbrofi "
+"gyda thechnoleg newydd, yn gwifrau prototeipiau neu’n troi syniadau niwlog "
+"yn ddemos sy’n gweithio, mae Jordan yn dod â chwilfrydedd, ynni ac ysbryd "
+"ymlaen-llaw sy’n cadw’r peiriant arloesi i redeg."
+
+#~ msgid "Customer Support Agent · Prompt Scoring Arcade · v0.1"
+#~ msgstr "Asiant Cymorth Cwsmeriaid · Arcêd Sgorio Ciwbiau · v0.1"
+
+#~ msgid "With the Client Portal, your customers can:"
+#~ msgstr "Gyda’r Porth Cleient, gall eich cwsmeriaid:"

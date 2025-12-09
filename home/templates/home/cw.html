@@ -1,0 +1,162 @@
+{% extends "home/base.html" %}
+{% block title %}Copywriter · Prompt Scoring Arcade{% endblock %}
+
+{% block content %}
+<head>
+    {% load static i18n %}
+    <meta charset="UTF-8">
+    <title>{% trans "Copywriter · Prompt Scoring Arcade" %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+
+    <div class="crt-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo-lockup">
+            <span class="logo-mark">▶</span>
+            <h1 class="site-title">Copywriter Scenario</h1>
+        </div>
+        <p class="site-tagline">
+            {% trans "Craft a strong prompt as if you were briefing an AI to write a launch email and landing page copy." %}
+        </p>
+    </header>
+
+    <main class="main-content">
+        <section class="role-layout">
+
+            <!-- LEFT: Scenario -->
+            <div class="role-panel role-panel-left">
+                <div class="role-panel-inner">
+                    <h2 class="role-panel-title">{% trans "Your role: Copywriter" %}</h2>
+                    <p class="role-panel-meta">
+                        {% trans "Scenario · Email · Landing Page" %}
+                    </p>
+
+                    <div class="scenario-box">
+                        <h3 class="scenario-heading">{% trans "Scenario" %}</h3>
+
+                        <p class="scenario-text">
+                            {% blocktrans trimmed %}
+                            You are a Copywriter for a small but growing SaaS company that helps freelancers and agencies manage their clients, proposals, and invoices in one place. The team is about to launch a new Client Portal feature.
+                            {% endblocktrans %}
+                        </p>
+
+                        <p class="scenario-text">
+                            {% blocktrans trimmed %}
+                            The Client Portal allows customers to share project timelines, files, and updates in one secure space, enable clients to approve proposals and sign documents online, reduce back-and-forth email threads and missed attachments, and give clients a single place to see what’s happening next.
+                            {% endblocktrans %}
+                        </p>
+
+                        <p class="scenario-text">
+                            {% blocktrans trimmed %}
+                            You need to brief an AI assistant to help you draft both a launch email for existing customers announcing the Client Portal and the key sections of a landing page, including the headline, subheading, benefits, and call to action.
+                            {% endblocktrans %}
+                        </p>
+
+                        <p class="scenario-text">
+                            {% blocktrans trimmed %}
+                            The audience is time-poor freelancers and small agencies who juggle multiple clients and dislike admin. The tone should be clear, energetic, and reassuring, emphasising saving time, reducing chaos, and helping them appear more professional to their clients.
+                            {% endblocktrans %}
+                        </p>
+
+                        <p class="scenario-text">
+                            {% blocktrans trimmed %}
+                            Your task is to write a prompt that you would give to the AI assistant to generate this email and landing page copy. Your prompt should include clear context about the product and audience, the goals of the campaign, and constraints such as tone of voice, structure, word count ranges, and any phrases or clichés to avoid.
+                            {% endblocktrans %}
+                        </p>
+
+                        <p class="scenario-hint">
+                            {% blocktrans trimmed %}
+                            Hint: Imagine you’re briefing a junior copywriter. What do they need so the first draft feels “on brand” and requires only light editing?
+                            {% endblocktrans %}
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Prompt form -->
+            <div class="role-panel role-panel-right">
+                <div class="role-panel-inner">
+                    <h2 class="role-panel-title">Submit your prompt</h2>
+                    <p class="role-panel-meta">
+                        {% trans "We’ll score how well your prompt guides the AI to respond with empathy and clarity."%}
+                    </p>
+
+                    <form method="post" class="prompt-form">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="form-errors">
+                                {% for error in form.non_field_errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="field-group">
+                            <label for="{{ form.name.id_for_label }}" class="field-label">
+                                {% trans "Your name"%}
+                            </label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="field-error">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-group field-group-textarea">
+                            <label for="{{ form.prompt.id_for_label }}" class="field-label">
+                                {% trans "Your AI prompt" %}
+                                <span class="field-label-extra">
+                                    ({% trans "describe the support reply you want the AI to draft" %})
+                                </span>
+                            </label>
+                            {{ form.prompt }}
+                            {% if form.prompt.errors %}
+                                <div class="field-error">
+                                    {% for error in form.prompt.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="submit-row">
+                            <button type="submit" class="btn-primary">
+                                {% trans "Submit prompt for scoring ⮕" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-dot"></span>
+    
+        <span class="footer-text">
+            {% trans "Prompt Scoring Arcade · v0.1" %}
+        </span>
+    
+        <div class="footer-logos">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.svg' %}" class="footer-logo">
+            </div>
+            <div class="logo-box">
+                <img src="{% static 'img/logo2.png' %}" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<!-- your page content here -->
+{% endblock %}

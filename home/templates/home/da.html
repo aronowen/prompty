@@ -1,0 +1,160 @@
+{% extends "home/base.html" %}
+{% block title %}Data Analyst · Prompt Scoring Arcade{% endblock %}
+
+{% block content %}
+<head>
+    {% load static i18n %}
+    <meta charset="UTF-8">
+    <title>Data Analyst · Prompt Scoring Arcade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+
+    <div class="crt-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo-lockup">
+            <span class="logo-mark">▶</span>
+            <h1 class="site-title">Data Analyst Scenario</h1>
+        </div>
+        <p class="site-tagline">
+            Craft a strong prompt as if you were briefing an AI to help explain a key dashboard to non-technical stakeholders.
+        </p>
+    </header>
+
+    <main class="main-content">
+        <section class="role-layout">
+
+            <!-- LEFT: Scenario -->
+            <div class="role-panel role-panel-left">
+                <div class="role-panel-inner">
+            
+                    <h2 class="role-panel-title">
+                        {% trans "Your role: Data Analyst" %}
+                    </h2>
+            
+                    <p class="role-panel-meta">
+                        {% trans "Scenario · Reporting · Stakeholder Comms" %}
+                    </p>
+            
+                    <div class="scenario-box">
+                        <h3 class="scenario-heading">{% trans "Scenario" %}</h3>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You are a Data Analyst at a growing SaaS company that provides a web platform for small businesses. Each month you produce a Product Usage and Adoption Dashboard that tracks how actively customers are engaging with key features.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        This month’s dashboard highlights several notable patterns. Overall logins have increased, but one of the core product features has experienced a clear and meaningful drop in usage. New customers appear to be adopting key features more quickly than long-term customers, and churn risk is rising within a particular customer segment. Additionally, a recent UX change seems to have altered behaviour across two major user flows.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Your task is to send a summary update to the leadership team and product managers. In this update you should explain what trends you observe in the data, why these trends matter for the business, and what potential decisions, risks, or follow-up questions emerge from the patterns you have identified.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Write a prompt that you would give to an AI assistant to help you draft this summary. Your prompt should include clear context about the dashboard, the intended audience of non-technical leaders, and specific instructions about the structure of the summary, such as highlighting key insights, explaining the impact, and suggesting recommended next steps.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-hint">
+                        {% blocktrans trimmed %}
+                        Hint: Imagine you are briefing a consultant who has never seen your product or dataset before. What information would they need to produce a clear, confident, and actionable summary?
+                        {% endblocktrans %}
+                        </p>
+            
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT: Prompt form -->
+            <div class="role-panel role-panel-right">
+                <div class="role-panel-inner">
+                    <h2 class="role-panel-title">Submit your prompt</h2>
+                    <p class="role-panel-meta">
+                        {% trans "We’ll score how well your prompt guides the AI to respond with empathy and clarity."%}
+                    </p>
+
+                    <form method="post" class="prompt-form">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="form-errors">
+                                {% for error in form.non_field_errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="field-group">
+                            <label for="{{ form.name.id_for_label }}" class="field-label">
+                                {% trans "Your name"%}
+                            </label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="field-error">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-group field-group-textarea">
+                            <label for="{{ form.prompt.id_for_label }}" class="field-label">
+                                {% trans "Your AI prompt" %}
+                                <span class="field-label-extra">
+                                    ({% trans "describe the support reply you want the AI to draft" %})
+                                </span>
+                            </label>
+                            {{ form.prompt }}
+                            {% if form.prompt.errors %}
+                                <div class="field-error">
+                                    {% for error in form.prompt.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="submit-row">
+                            <button type="submit" class="btn-primary">
+                                {% trans "Submit prompt for scoring ⮕" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-dot"></span>
+    
+        <span class="footer-text">
+            {% trans "Prompt Scoring Arcade · v0.1" %}
+        </span>
+    
+        <div class="footer-logos">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.svg' %}" class="footer-logo">
+            </div>
+            <div class="logo-box">
+                <img src="{% static 'img/logo2.png' %}" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<!-- your page content here -->
+{% endblock %}

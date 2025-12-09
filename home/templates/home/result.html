@@ -1,0 +1,57 @@
+{% extends "home/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Result · Prompt Scoring Arcade" %}{% endblock %}
+
+{% block content %}
+
+<section class="result-section">
+
+    <h1 class="result-title">{% trans "Your Score" %}</h1>
+
+    <p class="result-subtitle">
+        {% blocktrans with user_name=submission.name %}
+            Nice work, {{ user_name }}. Here’s how your prompt performed.
+        {% endblocktrans %}
+    </p>
+
+    <div class="result-layout">
+
+        <!-- LEFT: Big score -->
+        <div class="result-card score-card">
+
+            <h2 class="score-label">{% trans "Total Score" %}</h2>
+
+            <div class="score-value">
+                {{ submission.score }}<span class="score-max">/1000</span>
+            </div>
+
+            <p class="score-note">
+                {% trans "Higher scores mean clearer persona, task, context, and format." %}
+            </p>
+
+            <div class="result-actions">
+                <a href="{% url 'home' %}" class="btn-primary result-btn">
+                    {% trans "Play again" %}
+                </a>
+                <a href="{% url 'leaderboard' %}" class="btn-secondary result-btn">
+                    {% trans "View leaderboard" %}
+                </a>
+            </div>
+        </div>
+
+        <!-- RIGHT: Breakdown + prompt preview -->
+        <div class="result-card breakdown-card">
+            <div class="prompt-preview-box">
+                <h3 class="prompt-preview-title">{% trans "Your Prompt" %}</h3>
+
+                <p class="prompt-preview-text">
+                    {{ submission.prompt|linebreaksbr }}
+                </p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

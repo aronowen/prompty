@@ -1,0 +1,112 @@
+{% extends "home/base.html" %}
+{% load static i18n %}
+
+{% block title %}{% trans "Team · Prompt Scoring Arcade" %}{% endblock %}
+
+{% block content %}
+
+<section class="team-section">
+
+    <h1 class="team-title">{% trans "Meet the Team" %}</h1>
+
+    <p class="team-subtitle">
+        {% trans "Powered by creativity, curiosity, and far too much caffeine." %}
+    </p>
+
+    <div class="team-grid">
+
+        <!-- ====================== -->
+        <!--      ARON'S CARD       -->
+        <!-- ====================== -->
+        <div class="team-card">
+            <div class="team-card-inner">
+
+                <img src="{% static 'img/AO.jpg' %}" alt="{% trans 'Aron Edward Owen' %}" class="team-photo">
+
+                <h2 class="team-name">{% trans "Aron Edward Owen" %}</h2>
+
+                <p class="team-role">{% trans "Digital Innovation Manager" %}</p>
+
+                <div class="stat-box">
+                    <p><span class="stat-label">{% trans "Creativity" %}</span> <span class="stat-value">98</span></p>
+                    <p><span class="stat-label">{% trans "Leadership" %}</span> <span class="stat-value">95</span></p>
+                    <p><span class="stat-label">{% trans "AI Expertise" %}</span> <span class="stat-value">99</span></p>
+                    <p><span class="stat-label">{% trans "Coffee Consumption" %}</span> <span class="stat-value">★★★★★</span></p>
+                </div>
+
+                <p class="team-bio">
+                    {% blocktrans trimmed %}
+                    Aron leads digital innovation at M-SParc: building tools, designing systems,
+                    managing clusters, running events, and somehow still finding time to build
+                    full applications on weekends for fun.
+                    {% endblocktrans %}
+                </p>
+
+            </div>
+        </div>
+
+        <!-- ====================== -->
+        <!--      ELGAN'S CARD      -->
+        <!-- ====================== -->
+        <div class="team-card">
+            <div class="team-card-inner">
+
+                <img src="{% static 'img/EE.jpg' %}" alt="{% trans 'Elgan Edwards' %}" class="team-photo">
+
+                <h2 class="team-name">{% trans "Elgan Edwards" %}</h2>
+
+                <p class="team-role">{% trans "Degree Apprentice" %}</p>
+
+                <div class="stat-box">
+                    <p><span class="stat-label">{% trans "Problem Solving" %}</span> <span class="stat-value">92</span></p>
+                    <p><span class="stat-label">{% trans "Coding Speed" %}</span> <span class="stat-value">88</span></p>
+                    <p><span class="stat-label">{% trans "Debugging Luck" %}</span> <span class="stat-value">75</span></p>
+                    <p><span class="stat-label">{% trans "Snack Efficiency" %}</span> <span class="stat-value">★★★★★</span></p>
+                </div>
+
+                <p class="team-bio">
+                    {% blocktrans trimmed %}
+                    Elgan is the engine behind many of the digital projects — building,
+                    testing, learning, and improving at breakneck speed. He is known for
+                    writing code that works on the first try… sometimes.
+                    {% endblocktrans %}
+                </p>
+
+            </div>
+        </div>
+
+        <!-- ====================== -->
+        <!--     JORDAN'S CARD      -->
+        <!-- ====================== -->
+        <div class="team-card">
+            <div class="team-card-inner">
+
+                <img src="{% static 'img/JE.jpg' %}" alt="{% trans 'Jordan Eardley' %}" class="team-photo">
+
+                <h2 class="team-name">{% trans "Jordan Eardley" %}</h2>
+
+                <p class="team-role">{% trans "Digital Innovation Officer" %}</p>
+
+                <div class="stat-box">
+                    <p><span class="stat-label">{% trans "Tinkering" %}</span> <span class="stat-value">97</span></p>
+                    <p><span class="stat-label">{% trans "Vibe Coding" %}</span> <span class="stat-value">94</span></p>
+                    <p><span class="stat-label">{% trans "Curiosity Level" %}</span> <span class="stat-value">99</span></p>
+                    <p><span class="stat-label">{% trans "Coffee Dependency" %}</span> <span class="stat-value">★★★★☆</span></p>
+                </div>
+
+                <p class="team-bio">
+                    {% blocktrans trimmed %}
+                    Jordan is Ar y Lôn — the team's resident tinkerer and vibe coder. Whether
+                    experimenting with emerging tech, wiring prototypes, or turning vague ideas 
+                    into working demos, Jordan brings curiosity, energy, and a hands-on spirit 
+                    that keeps the innovation engine running.
+                    {% endblocktrans %}
+                </p>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

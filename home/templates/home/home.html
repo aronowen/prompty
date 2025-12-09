@@ -1,0 +1,156 @@
+{% extends "home/base.html" %}
+{% load static i18n %}
+{% block title %}{% trans "Prompt Scoring Arcade" %}{% endblock %}
+{% block content %}
+<head>
+    <meta charset="UTF-8">
+    <title>{% trans "Prompt Scoring Arcade" %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+
+    <div class="crt-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo-lockup">
+            <span class="logo-mark">▶</span>
+            <h1 class="site-title">{% trans "Prompt Scoring Arcade" %}</h1>
+        </div>
+        <p class="site-tagline">
+            {% trans "Select a role, drop in a prompt, and let the retro engine score your skills." %}
+        </p>
+    </header>
+
+    <main class="main-content">
+        <section class="roles-section">
+            <h2 class="section-title">{% trans "Choose your role" %}</h2>
+            <p class="section-subtitle">
+                {% blocktrans trimmed %}
+                Pick a lane below or let fate decide with the <span class="highlight">Random Role</span>.
+                {% endblocktrans %}
+            </p>
+
+            <div class="role-grid">
+
+                <!-- 1. HR Manager -->
+                <a href="/role/hr-manager/" class="role-card">
+                    <div class="role-header">
+                        <span class="role-label">01</span>
+                        <h3 class="role-title">{% trans "HR Manager" %}</h3>
+                    </div>
+                    <p class="role-text">
+                        {% trans "Score prompts for recruitment, performance reviews, and tricky people problems." %}
+                    </p>
+                    <span class="role-cta">{% trans "Load HR arena ⮕" %}</span>
+                </a>
+
+                <!-- 2. Data Analyst -->
+                <a href="/role/data-analyst/" class="role-card">
+                    <div class="role-header">
+                        <span class="role-label">02</span>
+                        <h3 class="role-title">{% trans "Data Analyst" %}</h3>
+                    </div>
+                    <p class="role-text">
+                        {% trans "Evaluate prompts that explain dashboards, trends, and gnarly spreadsheets." %}
+                    </p>
+                    <span class="role-cta">{% trans "Load data arena ⮕" %}</span>
+                </a>
+
+                <!-- 3. Marketing Strategist -->
+                <a href="/role/marketing-strategist/" class="role-card">
+                    <div class="role-header">
+                        <span class="role-label">03</span>
+                        <h3 class="role-title">{% trans "Marketing Strategist" %}</h3>
+                    </div>
+                    <p class="role-text">
+                        {% trans "Judge prompts for campaigns, landing pages, and social copy that actually converts." %}
+                    </p>
+                    <span class="role-cta">{% trans "Load marketing arena ⮕" %}</span>
+                </a>
+
+                <!-- 4. Product Designer -->
+                <a href="/role/product-designer/" class="role-card">
+                    <div class="role-header">
+                        <span class="role-label">04</span>
+                        <h3 class="role-title">{% trans "Product Designer" %}</h3>
+                    </div>
+                    <p class="role-text">
+                        {% trans "Assess prompts for UX flows, user research, and delightful microcopy." %}
+                    </p>
+                    <span class="role-cta">{% trans "Load design arena ⮕" %}</span>
+                </a>
+
+                <!-- 5. Customer Support Agent -->
+                <a href="/role/customer-support/" class="role-card">
+                    <div class="role-header">
+                        <span class="role-label">05</span>
+                        <h3 class="role-title">{% trans "Customer Support Agent" %}</h3>
+                    </div>
+                    <p class="role-text">
+                        {% trans "Rate prompts that handle complaints, refunds, and “have you tried turning it off?”." %}
+                    </p>
+                    <span class="role-cta">{% trans "Load support arena ⮕" %}</span>
+                </a>
+
+                <!-- 6. Copywriter -->
+                <a href="/role/copywriter/" class="role-card">
+                    <div class="role-header">
+                        <span class="role-label">06</span>
+                        <h3 class="role-title">{% trans "Copywriter" %}</h3>
+                    </div>
+                    <p class="role-text">
+                        {% trans "Score prompts for taglines, email sequences, and content that actually sounds human." %}
+                    </p>
+                    <span class="role-cta">{% trans "Load copy arena ⮕" %}</span>
+                </a>
+
+                <!-- 7. IT Specialist -->
+                <a href="/role/it-specialist/" class="role-card">
+                    <div class="role-header">
+                        <span class="role-label">07</span>
+                        <h3 class="role-title">{% trans "IT Specialist" %}</h3>
+                    </div>
+                    <p class="role-text">
+                        {% trans "Evaluate prompts for troubleshooting, documentation, and “my printer is possessed”." %}
+                    </p>
+                    <span class="role-cta">{% trans "Load IT arena ⮕" %}</span>
+                </a>
+
+                <!-- 8. Random Role -->
+                <a href="/role/random/" class="role-card role-card-random">
+                    <div class="role-header">
+                        <span class="role-label">∞</span>
+                        <h3 class="role-title">
+                            {% trans "Random Role" %} <span class="dice">🎲</span>
+                        </h3>
+                    </div>
+                    <p class="role-text">
+                        {% trans "Let the arcade pick one of the seven roles at random and throw you straight into the challenge." %}
+                    </p>
+                    <span class="role-cta">{% trans "I’m feeling lucky ⮕" %}</span>
+                </a>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-dot"></span>
+
+        <span class="footer-text">
+            {% trans "Prompt Scoring Arcade · v0.1" %}
+        </span>
+
+        <div class="footer-logos">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.svg' %}" class="footer-logo">
+            </div>
+            <div class="logo-box">
+                <img src="{% static 'img/logo2.png' %}" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+{% endblock %}

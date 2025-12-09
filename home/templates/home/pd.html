@@ -1,0 +1,161 @@
+{% extends "home/base.html" %}
+{% block title %}Product Designer · Prompt Scoring Arcade{% endblock %}
+
+{% block content %}
+<head>
+    {% load static i18n %}
+    <meta charset="UTF-8">
+    <title>Product Designer · Prompt Scoring Arcade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+
+    <div class="crt-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo-lockup">
+            <span class="logo-mark">▶</span>
+            <h1 class="site-title">Product Designer Scenario</h1>
+        </div>
+        <p class="site-tagline">
+            Craft a strong prompt as if you were briefing an AI to help design and describe a new onboarding flow.
+        </p>
+    </header>
+
+    <main class="main-content">
+        <section class="role-layout">
+
+            <!-- LEFT: Scenario -->
+            <div class="role-panel role-panel-left">
+                <div class="role-panel-inner">
+            
+                    <h2 class="role-panel-title">
+                        {% trans "Your role: Product Designer" %}
+                    </h2>
+            
+                    <p class="role-panel-meta">
+                        {% trans "Scenario · UX Flow · Onboarding" %}
+                    </p>
+            
+                    <div class="scenario-box">
+            
+                        <h3 class="scenario-heading">{% trans "Scenario" %}</h3>
+            
+                        <p class="scenario-text">
+                        {% blocktrans %}
+                        You are a Product Designer for a collaborative workspace app used by small teams to organise projects, tasks, and shared documents. At present, new users sign up, land on a cluttered dashboard, and frequently abandon the product within the first few minutes.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans %}
+                        You have been asked to redesign the entire first-time user onboarding flow so that new users immediately understand the value of the product, complete a simple first-project setup in just a few guided steps, feel encouraged to invite at least one teammate, and finish the onboarding with a strong sense of what to do next.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You want to use an AI assistant to help you think through this flow in detail. You would like the AI to propose a structured, step-by-step onboarding experience that outlines the narrative and messaging for each screen, identifies which UI elements should be highlighted or explained, suggests ways to keep the experience accessible and low-friction, and offers ideas for microcopy, tooltips, and helpful empty-state messages.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Your task is to write a prompt that you would give to an AI assistant to generate this onboarding flow. Your prompt should include clear product context, details about your target users, the goals of the redesign, and any constraints such as tone, platform requirements, visual style guidelines, or technical limitations.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-hint">
+                        {% blocktrans trimmed %}
+                        Hint: Brief the AI as if you were handing the project over to another designer who has never seen your app. What information would they need to propose a realistic, user-centred onboarding flow?
+                        {% endblocktrans %}
+                        </p>
+            
+                    </div>
+            
+                </div>
+            </div>
+
+            <!-- RIGHT: Prompt form -->
+            <div class="role-panel role-panel-right">
+                <div class="role-panel-inner">
+                    <h2 class="role-panel-title">Submit your prompt</h2>
+                    <p class="role-panel-meta">
+                        {% trans "We’ll score how well your prompt guides the AI to respond with empathy and clarity."%}
+                    </p>
+
+                    <form method="post" class="prompt-form">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="form-errors">
+                                {% for error in form.non_field_errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="field-group">
+                            <label for="{{ form.name.id_for_label }}" class="field-label">
+                                {% trans "Your name"%}
+                            </label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="field-error">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-group field-group-textarea">
+                            <label for="{{ form.prompt.id_for_label }}" class="field-label">
+                                {% trans "Your AI prompt" %}
+                                <span class="field-label-extra">
+                                    ({% trans "describe the support reply you want the AI to draft" %})
+                                </span>
+                            </label>
+                            {{ form.prompt }}
+                            {% if form.prompt.errors %}
+                                <div class="field-error">
+                                    {% for error in form.prompt.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="submit-row">
+                            <button type="submit" class="btn-primary">
+                                {% trans "Submit prompt for scoring ⮕" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-dot"></span>
+    
+        <span class="footer-text">
+            {% trans "Prompt Scoring Arcade · v0.1" %}
+        </span>
+    
+        <div class="footer-logos">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.svg' %}" class="footer-logo">
+            </div>
+            <div class="logo-box">
+                <img src="{% static 'img/logo2.png' %}" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+{% endblock %}

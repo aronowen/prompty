@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static i18n%}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}{% trans "Prompt Scoring Arcade" %}{% endblock %}</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+    <div class="crt-overlay"></div>
+
+    <!-- ======================== -->
+    <!--       NAVIGATION BAR     -->
+    <!-- ======================== -->
+    <nav class="navbar">
+        <div class="nav-left">
+            <a href="{% url 'home' %}" class="nav-logo-link">
+                <img src="{% static 'img/logo2.png' %}" alt="Logo" class="nav-logo">
+            </a>
+        </div>
+
+        <div class="nav-right">
+            <a href="{% url 'home' %}" class="nav-item">{% trans "Home" %}</a>
+            <a href="{% url 'team' %}" class="nav-item">{% trans "Team" %}</a>
+            <a href="{% url 'leaderboard' %}" class="nav-item">{% trans "Leaderboard" %}</a>
+        
+            <form action="{% url 'set_language' %}" method="post" class="lang-switcher">
+                {% csrf_token %}
+                <input type="hidden" name="next" value="{{ request.path }}">
+                <button type="submit" name="language" value="cy" class="lang-btn">Cymraeg</button>
+                <button type="submit" name="language" value="en" class="lang-btn">English</button>
+            </form>
+        </div>
+    </nav>
+
+    <!-- ======================== -->
+    <!--       MAIN CONTENT       -->
+    <!-- ======================== -->
+    <main class="main-content">
+        {% get_current_language as CURRENT_LANGUAGE %}
+        <p style="position:fixed;bottom:0;left:0;font-size:10px;">
+            LANG = {{ CURRENT_LANGUAGE }}
+        </p>
+        {% block content %}
+        {% endblock %}
+    </main>
+
+</body>
+</html>

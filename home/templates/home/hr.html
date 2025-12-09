@@ -1,0 +1,157 @@
+{% extends "home/base.html" %}
+{% block title %}HR Manager · Prompt Scoring Arcade{% endblock %}
+
+{% block content %}
+<head>
+    {% load static i18n %}
+    <meta charset="UTF-8">
+    <title>HR Manager · Prompt Scoring Arcade</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body class="page">
+
+    <div class="crt-overlay"></div>
+
+    <header class="site-header">
+        <div class="logo-lockup">
+            <span class="logo-mark">▶</span>
+            <h1 class="site-title">HR Manager Scenario</h1>
+        </div>
+        <p class="site-tagline">
+            Craft a strong prompt as if you were briefing your colleagues about an upcoming AI Application Day.
+        </p>
+    </header>
+
+    <main class="main-content">
+        <section class="role-layout">
+
+            <div class="role-panel role-panel-left">
+                <div class="role-panel-inner">
+            
+                    <h2 class="role-panel-title">{% trans "Your role: HR Manager" %}</h2>
+                    <p class="role-panel-meta">
+                        {% trans "Scenario · Internal Comms · AI Adoption" %}
+                    </p>
+            
+                    <div class="scenario-box">
+                        <h3 class="scenario-heading">{% trans "Scenario" %}</h3>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You are the HR Manager at a mid-sized tech company with around 120 employees working across engineering, product, sales, and operations. Next month, the organisation is running its first ever AI Application Day—a full-day internal event where staff can learn about AI tools, experiment with them, and propose ideas for how AI could improve their workflows.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Your task is to draft a clear internal email announcing this event to all staff. In your message, explain the purpose of AI Application Day and why the company is launching it now, outline the date, time, and format of the day, and describe what staff need to do in advance such as registering for sessions or bringing example tasks to explore.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        You should also communicate how ideas and experiments from the day will be captured and followed up afterwards, and clarify any expectations around participation, behaviour, data security, and the responsible use of AI tools within the organisation.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-text">
+                        {% blocktrans trimmed %}
+                        Write a prompt that you would give to an AI assistant to help you produce this email. Your prompt should include clear context, specific instructions, and relevant constraints such as tone, length, and audience so that the AI can generate a high-quality first draft.
+                        {% endblocktrans %}
+                        </p>
+            
+                        <p class="scenario-hint">
+                        {% blocktrans trimmed %}
+                        Hint: Imagine you are delegating this task to a junior colleague who does not yet know the company well. What information would they need to get the email right on the first attempt?
+                        {% endblocktrans %}
+                        </p>
+            
+                    </div>
+            
+                </div>
+            </div>
+
+            <!-- RIGHT: Prompt form -->
+            <div class="role-panel role-panel-right">
+                <div class="role-panel-inner">
+                    <h2 class="role-panel-title">Submit your prompt</h2>
+                    <p class="role-panel-meta">
+                        {% trans "We will score how well your prompt guides the AI to respond with empathy and clarity." %}
+                    </p>
+
+                    <form method="post" class="prompt-form">
+                        {% csrf_token %}
+
+                        {% if form.non_field_errors %}
+                            <div class="form-errors">
+                                {% for error in form.non_field_errors %}
+                                    <p>{{ error }}</p>
+                                {% endfor %}
+                            </div>
+                        {% endif %}
+
+                        <div class="field-group">
+                            <label for="{{ form.name.id_for_label }}" class="field-label">
+                                {% trans "Your name"%}
+                            </label>
+                            {{ form.name }}
+                            {% if form.name.errors %}
+                                <div class="field-error">
+                                    {% for error in form.name.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="field-group field-group-textarea">
+                            <label for="{{ form.prompt.id_for_label }}" class="field-label">
+                                {% trans "Your AI prompt" %}
+                                <span class="field-label-extra">
+                                    ({% trans "describe the support reply you want the AI to draft" %})
+                                </span>
+                            </label>
+                            {{ form.prompt }}
+                            {% if form.prompt.errors %}
+                                <div class="field-error">
+                                    {% for error in form.prompt.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% endif %}
+                        </div>
+
+                        <div class="submit-row">
+                            <button type="submit" class="btn-primary">
+                                {% trans "Submit prompt for scoring ⮕" %}
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <span class="footer-dot"></span>
+    
+        <span class="footer-text">
+            {% trans "Prompt Scoring Arcade · v0.1" %}
+        </span>
+    
+        <div class="footer-logos">
+            <div class="logo-box">
+                <img src="{% static 'img/logo1.svg' %}" class="footer-logo">
+            </div>
+            <div class="logo-box">
+                <img src="{% static 'img/logo2.png' %}" class="footer-logo">
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<!-- your page content here -->
+{% endblock %}
