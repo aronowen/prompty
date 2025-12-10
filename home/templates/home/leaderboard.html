@@ -1,107 +1,82 @@
 {% extends "home/base.html" %}
 {% load static i18n %}
+
 {% block title %}{% trans "Leaderboard · Prompt Scoring Arcade" %}{% endblock %}
 
 {% block content %}
 
-<head>
-    <meta charset="UTF-8">
-    <title>{% trans "Leaderboard · Prompt Scoring Arcade" %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-</head>
+<section class="leaderboard-section">
 
-<body class="page">
-
-    <div class="crt-overlay"></div>
-
-    <header class="site-header">
-        <div class="logo-lockup">
-            <span class="logo-mark">▶</span>
-            <h1 class="site-title">{% trans "Prompt Leaderboard" %}</h1>
+    <!-- =========================== -->
+    <!--     QR CODE ROW AT TOP     -->
+    <!-- =========================== -->
+    <div class="qr-row">
+        <div class="qr-box">
+            <img src="{% static 'img/qr_qa.png' %}" class="qr-image" alt="Q&A QR">
+            <p class="qr-label">{% trans "Q&A" %}</p>
         </div>
 
-        <p class="site-tagline">
-            {% blocktrans %}
-            Top 20 prompts across all roles, ranked by total score out of 1000.
-            {% endblocktrans %}
-        </p>
-    </header>
+        <div class="qr-box">
+            <img src="{% static 'img/qr_prompty.png' %}" class="qr-image" alt="Prompty QR">
+            <p class="qr-label">{% trans "Prompty" %}</p>
+        </div>
 
-    <main class="main-content">
-        <section class="leaderboard-section">
+        <div class="qr-box">
+            <img src="{% static 'img/qr_booch.png' %}" class="qr-image" alt="Booch QR">
+            <p class="qr-label">{% trans "Kombucha Bar" %}</p>
+        </div>
+    </div>
 
-            <h2 class="section-title">{% trans "High scores" %}</h2>
+    <h1 class="leaderboard-title">{% trans "Prompt Leaderboard" %}</h1>
+    <p class="section-subtitle">
+        {% blocktrans trimmed %}
+        Top 20 prompts across all roles, ranked by total score out of 1000.
+        {% endblocktrans %}
+    </p>
 
-            <p class="section-subtitle">
-                {% blocktrans %}
-                Arcade legends only. Higher scores mean clearer persona, task, context, and format.
-                {% endblocktrans %}
-            </p>
+    {% if entries %}
+    <div class="leaderboard-card">
+        <table class="leaderboard-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>{% trans "Name" %}</th>
+                    <th>{% trans "Score" %}</th>
+                    <th>{% trans "Prompt Preview" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for entry in entries %}
+                <tr>
+                    <td class="rank-cell">
+                        {% if forloop.counter == 1 %}🥇
+                        {% elif forloop.counter == 2 %}🥈
+                        {% elif forloop.counter == 3 %}🥉
+                        {% else %}
+                            {{ forloop.counter }}
+                        {% endif %}
+                    </td>
+                    <td class="name-cell">{{ entry.name }}</td>
+                    <td class="score-cell">{{ entry.score }} / 1000</td>
+                    <td class="prompt-cell">
+                        {% if entry.prompt|length > 120 %}
+                            {{ entry.prompt|slice:":120" }}…
+                        {% else %}
+                            {{ entry.prompt }}
+                        {% endif %}
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
 
-            {% if entries %}
-                <div class="leaderboard-card">
-                    <table class="leaderboard-table">
-                        <thead>
-                            <tr>
-                                <th>{% trans "#" %}</th>
-                                <th>{% trans "Name" %}</th>
-                                <th>{% trans "Score" %}</th>
-                                <th>{% trans "Prompt Preview" %}</th>
-                            </tr>
-                        </thead>
+    {% else %}
+    <p class="no-entries">
+        {% trans "No prompts have been scored yet. Be the first to hit the arcade." %}
+    </p>
+    {% endif %}
 
-                        <tbody>
-                            {% for entry in entries %}
-                                <tr>
-                                    <td class="rank-cell">
-                                        {% if forloop.counter == 1 %}
-                                            🥇
-                                        {% elif forloop.counter == 2 %}
-                                            🥈
-                                        {% elif forloop.counter == 3 %}
-                                            🥉
-                                        {% else %}
-                                            {{ forloop.counter }}
-                                        {% endif %}
-                                    </td>
-
-                                    <td class="name-cell">{{ entry.name }}</td>
-
-                                    <td class="score-cell">
-                                        {{ entry.score }} / 1000
-                                    </td>
-
-                                    <td class="prompt-cell">
-                                        {% if entry.prompt|length > 120 %}
-                                            {{ entry.prompt|slice:":120" }}…
-                                        {% else %}
-                                            {{ entry.prompt }}
-                                        {% endif %}
-                                    </td>
-                                </tr>
-                            {% endfor %}
-                        </tbody>
-                    </table>
-                </div>
-
-            {% else %}
-
-                <p class="no-entries">
-                    {% trans "No prompts have been scored yet. Be the first to hit the arcade." %}
-                </p>
-
-            {% endif %}
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <span class="footer-dot"></span>
-        <span class="footer-text">
-            {% trans "Leaderboard · Prompt Scoring Arcade · v0.1" %}
-        </span>
-    </footer>
-
-</body>
+</section>
 
 {% endblock %}
