@@ -998,3 +998,30 @@ body.page {
         grid-template-columns: 1fr;
     }
 }
+
+.qr-row {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    margin-top: 1rem;
+}
+
+.qr-box {
+    text-align: center;
+}
+
+.qr-image {
+    width: 140px;
+    height: 140px;
+    border: 4px solid #222;
+    background: white;
+    padding: 6px;
+    border-radius: 8px;
+}
+
+.qr-label {
+    margin-top: 0.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
